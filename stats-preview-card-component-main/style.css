@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+:root{
+    --Very-dark-blue: hsl(233, 47%, 7%); /*(main background)*/
+    --Dark-desaturated-blue: hsl(244, 38%, 16%); /*(card background)*/
+    --Soft-violet: hsl(277, 64%, 61%); /*(accent)*/
+
+    --White: hsl(0, 0%, 100%); /*(main heading, stats)*/
+    --Slightly-transparent-white-01: hsla(0, 0%, 100%, 0.75); /*(main paragraph)*/
+    --Slightly-transparent-white-02: hsla(0, 0%, 100%, 0.6); /*(stat headings)*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.box{
+    margin: 0 auto;
+    background-color: var(--Dark-desaturated-blue);
+    width: 1000px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+ .container{
+    height: 100%;
+    width: 50%;
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title{
+    color: var(--White);
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.span__title{
+    color: var(--Soft-violet);
+}
+
+.description{
+    color: var(--Slightly-transparent-white-01);
+    margin: 20px 0;
+    line-height: 1.7rem;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+.counter{
+    display: flex;
+    gap: 4rem;
+    margin-top: 3.5rem;
+}
+
+.rate{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 25px;
+    color: var(--White);
+    font-family: 'Inter', 'sans-serif;Deca', sans-serif;
+    font-weight: 700;
+}
+
+.rate span{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: var(--Slightly-transparent-white-02);
+}
+
+.image{
+    height: 100%;
+    width: 50%;
+    background-image: url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.image__overly{
+    height: 100%;
+    width: 100%;
+    background-color: hsla(277, 100%, 23%, 0.496);
+}
+
+@media only screen and (max-width: 600px){
+    .box{
+        height: 95vh;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .container{
+        padding: 20px;
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        top: 40%;
+    }
+
+    .image{
+        position: absolute;
+        height: 40%;
+        width: 100%;
+    }
+
+    .description{
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .title{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .counter{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0px 0;
+    }
+    
+    .rate{
+        padding: 0;
+        margin: 0;
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .rate span{
+        font-size: 10px;
+        margin: 0;
+    }
+}
